@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Result: <input id="result" style="text-align: end;" />
+    <br>
+    <br>
+    <button class="button">7</button>
+    <button class="button">8</button>
+    <button class="button">9</button>
+    <button class="button">+</button>
+    <button onclick="caculate()">=</button>
+    <script>
+        // let result = document.getElementById('result');
+        // function append(value) {
+        //     result.value += value;
+        // }
+        // function caculate() {
+        //     result.value = eval(result.value);
+        // }
+
+        let result = document.getElementById('result');
+        let buttons = document.getElementsByClassName('button');
+        for (let i = 0; i < buttons.length; i++) {
+            let button = buttons[i];
+            button.addEventListener('click', function onClick() {
+                result.value += button.innerHTML;
+            })
+        }
+        function caculate() {
+            result.value = eval(result.value);
+        }
+    </script>
+</body>
+
+</html>

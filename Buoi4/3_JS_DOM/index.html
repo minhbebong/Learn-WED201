@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .test~h3{
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <h3>Thẻ h3 cấp 0 - thứ 1</h3>
+    <div class="test">
+        <h3>Thẻ h3 cấp 1 - thứ 1</h3>
+        <h3>Thẻ h3 cấp 1 - thứ 2</h3>
+        <span>
+            <h3>Thẻ h3 cấp 2</h3>
+        </span>
+        <h3 id="id1_3">Thẻ h3 cấp 1 - thứ 3</h3>
+        <div>
+            <div>
+                <h3>Thẻ h3 cấp 3</h3>
+            </div>
+        </div>
+    </div>
+    <h3>Thẻ h3 cấp 0 - thứ 2</h3>
+    <h3>Thẻ h3 cấp 0 - thứ 3</h3>
+    <a id="google" >Go to google</a>
+    <script>
+        let h13=document.getElementById('id1_3');
+        console.log(h13);
+        let h3 = document.getElementsByTagName('h3');
+        // console.log(h3[1]);
+
+        let test = document.getElementsByClassName('test');
+        // console.log(test[0]);
+
+        let h33 = document.querySelectorAll('div div h3');
+        console.log(h33[0]);
+
+        //thay đổi giá trị
+        // h13.innerHTML="h13 Đã bị thay đổi";
+        // h13.innerHTML="<a href='#'>Click me</a>";
+
+        // let google = document.getElementById('google');
+        // google.href="https://www.google.com.vn/?hl=vi";
+
+        // let google = document.getElementById('google');
+        // google.style.color="red";
+        // google.style.fontSize="50px";
+        // google.style.textDecoration="underline";
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        Name: <input type="text" class="input"><br>
+        Phone<input type="text" class="input"><br>
+        Email<input type="text" class="input"><br>
+        <input id="btn-check" type="submit" value="Check" onclick="checkValue()">
+
+    <script>
+        function checkValue() {
+            let inputs = document.getElementsByClassName('input');
+            let name = inputs[0].value;
+            let phone = inputs[1].value;
+            let email =  inputs[2].value;
+            let nameREG = /^[a-z ]+$/i
+            let phoneREG = /[0-9]{10,11}/
+            let emailREG = /^[a-z0-9]+@(fpt.edu.vn)$/i
+
+            if(!nameREG.test(name)){
+                alert('Name invalid');
+            }else if(!phoneREG.test(phone)){
+                alert('Phone invalid');
+            }else if(!emailREG.test(email)){
+                alert('Email invalid');
+            }else{
+                alert('OK');
+            }
+        }
+    </script>
+</body>
+
+</html>

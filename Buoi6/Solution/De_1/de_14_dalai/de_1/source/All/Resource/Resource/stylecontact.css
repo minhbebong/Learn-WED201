@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.text-center{
+    text-align: center;
+}
+#table td input{
+    padding: 15px 0;
+    width: 450px
+}
+#table td input:focus{
+    background-color: yellow;
+}
+#table tr td:first-child{
+    width: 90px;
+}

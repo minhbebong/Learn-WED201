@@ -4,3 +4,6 @@
     overflow: scroll;
     border: 1px solid #ccc;
 }
+.text_1 p{
+    text-align: center;
+}

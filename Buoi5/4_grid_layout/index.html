@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .header {
+            background-color: lightcoral;
+            grid-column: 1/13;
+        }
+        .icon{
+            display: none;
+        }
+
+        .menu {
+            background-color: cyan;
+            grid-row: 2/4;
+            grid-column: 1/5;
+        }
+
+        .main {
+            background-color: orange;
+            grid-column: 5/11;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .right {
+            background-color: yellow;
+            grid-column: 11/13;
+        }
+
+        .footer {
+            background-color: lightgreen;
+            grid-column: 5/13;
+        }
+
+        .card {
+            background-color: lightpink;
+
+        }
+
+        @media screen and (max-width:1200px) {
+            .header {
+                grid-column: 1/8;
+            }
+
+            .menu {
+                grid-column: 8/13;
+                grid-row: 1/2;
+            }
+
+            .main {
+                grid-column: 1/11;
+            }
+
+            .footer {
+                grid-column: 1/13;
+            }
+        }
+
+        @media screen and (max-width:750px) {
+            .header {
+                grid-column: 1/12;
+            }
+
+            .menu {
+                display: none;
+            }
+            .icon{
+                display: block;
+                grid-column: 12/13;
+                background-color: #AAA;
+            }
+
+            .main {
+                grid-column: 1/13;
+            }
+
+            .right {
+                grid-column: 1/13;
+            }
+
+            .footer {
+                grid-column: 1/13;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media screen and (max-width:350px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="icon"><i class="fas fa-bars"></i></div>
+        <div class="menu">Menu</div>
+        <div class="main">
+            <div class="card">Card1</div>
+            <div class="card">Card2</div>
+            <div class="card">Card3</div>
+            <div class="card">Card4</div>
+            <div class="card">Card5</div>
+            <div class="card">Card6</div>
+            <div class="card">Card7</div>
+            <div class="card">Card8</div>
+            <div class="card">Card9</div>
+            <div class="card">Card10</div>
+            <div class="card">Card11</div>
+            <div class="card">Card12</div>
+        </div>
+        <div class="right">Right</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>

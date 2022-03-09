@@ -1,0 +1,18 @@
+.text-center{
+    text-align: center;
+}
+.footer{
+    background-color: #EEE;
+}
+.product>h2{
+    font-size: 14px;
+    color: blue;
+    text-align: center;
+}
+.product>p{
+    color: orange;
+    text-align: center;
+}
+.footer li{
+    list-style-type: none;
+}

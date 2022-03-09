@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Todo App</h1>
+    <input id="input" /><button onclick="addItem()">Add</button>
+    <div class="result">
+        <ul id="list-todo">
+        </ul>
+    </div>
+    <script>
+        // console.log(localStorage.getItem('key2'));
+        // localStorage.setItem('key2', 'value2');
+
+        // let person = {
+        //     id: 1,
+        //     name: "Quan"
+        // }
+        // let personStr = JSON.stringify(person);
+        // localStorage.setItem('person',personStr);
+
+        // let personFromStorage = JSON.parse(localStorage.getItem('person'));
+        // console.log(personFromStorage, typeof personFromStorage);
+        let listTodoJSON = localStorage.getItem('todos');
+        let listTodo = listTodoJSON ? JSON.parse(listTodoJSON) : [];
+        let ul = document.getElementById('list-todo');
+        for (let i = 0; i < listTodo.length; i++) {
+            let li = document.createElement('li');
+            li.innerHTML = listTodo[i];
+            ul.appendChild(li);
+        }
+
+        function addItem() {
+            let input = document.getElementById('input');
+            let text = input.value;
+            let li = document.createElement('li');
+            li.innerHTML = text;
+            ul.appendChild(li);
+            listTodo.push(text);
+            localStorage.setItem('todos', JSON.stringify(listTodo));
+            input.value = "";
+        }
+    </script>
+</body>
+
+</html>

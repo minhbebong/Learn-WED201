@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zing MP3</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <div class="cover">
+        <h1 class="title">Lựa Chọn Hôm Nay</h1>
+        <div class="menu">
+            <div class="choice">
+                <div class="img">
+                    <img src="img/weekend.jpg" alt="">
+                    <div class="hover">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="play-circle-outline" class="play"></ion-icon>
+                        <audio src="audio/morningcoffeeaudio.mp3" class="audio"></audio>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+                <h3 class="song_name">V_Weekend</h3>
+                <p class="describe">Những lựa chọn đầy năng lượng và vui vẻ dành cho ngày cuối tuần của bạn</p>
+            </div>
+            <div class="choice">
+                <div class="img">
+                    <img src="img/Ballad.png" alt="">
+                    <div class="hover">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="play-circle-outline" class="play"></ion-icon>
+                        <audio src="audio/khongbang.mp3" class="audio"></audio>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+                <h3 class="song_name">Đỉnh Cao Ballad</h3>
+                <p class="describe">Nơi tình yêu thăng hoa với những bản Ballad đỉnh nhất</p>
+            </div>
+            <div class="choice">
+                <div class="img">
+                    <img src="img/k-pop.jpg" alt="">
+                    <div class="hover">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="play-circle-outline" class="play"></ion-icon>
+                        <audio src="audio/fakelove.mp3" class="audio"></audio>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+                <h3 class="song_name">K-Pop Move</h3>
+                <p class="describe">Giai điệu sôi động không thể thiếu những vũ đạo nóng bỏng</p>
+            </div>
+            <div class="choice">
+                <div class="img">
+                    <img src="img/rap-viet.jpg" alt="">
+                    <div class="hover">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="play-circle-outline" class="play"></ion-icon>
+                        <audio src="audio/thucuoi.mp3" class="audio"></audio>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+                <h3 class="song_name">Rap Việt Kết Hợp</h3>
+                <p class="describe">Khi các rapper Việt kết hợp cùng nhau trong cùng 1 track</p>
+            </div>
+            <div class="choice">
+                <div class="img">
+                    <img src="img/hits.jpg" alt="">
+                    <div class="hover">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="play-circle-outline" class="play"></ion-icon>
+                        <audio src="audio/lovestory.mp3" class="audio"></audio>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                </div>
+                <h3 class="song_name">Just Hits</h3>
+                <p class="describe">Toàn là Hit Âu Mỹ nổi bật mà bạn nên nghe ngay</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let play = document.querySelectorAll(".play");
+        let audio = document.querySelectorAll(".audio");
+        let isPlay = false;
+        for (let i = 0; i < play.length; i++) {
+            play[i].addEventListener("click", () => {
+                isPlay = !isPlay;
+                let icon = isPlay ? "pause-circle-outline" : "play-circle-outline";
+                play[i].setAttribute("name", icon);
+                isPlay ? audio[i].play() : audio[i].pause()
+            })
+        }
+    </script>
+</body>
+
+</html>

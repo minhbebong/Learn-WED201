@@ -1,0 +1,20 @@
+.logo img{
+    border-radius: 50%;
+}
+.carousel-inner img{
+    width: 100%;
+}
+.food h1{
+    color: yellow;
+    font-size: 18px;
+    text-align: center;
+}
+.food p{
+    color:#fff;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.footer{
+    background-color: #DDD;
+    border-top: 2px solid yellowgreen;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 10;
+        let b = "Hello world";
+        const PI = 3.14;
+        document.write("Pi = " + PI);
+        console.log("a = " + a);
+        console.log("b = " + b);
+
+        a = "Tao la chu co";
+
+
+        //typeof để kiểm tra kiểu dữ liệu
+        console.log(typeof PI);
+
+        let c; //c khai báo mà không khởi tạo => c undefined
+        console.log(typeof c);
+
+        // let num1 = 10;
+        // let num2 = 0;
+        // let num3 = num1 / num2;
+        // console.log(num3);
+
+        //array
+        let numbers = [1, 2, 3, 4, 5];
+
+        //Thêm 1 phần tử vào cuối mảng
+        numbers.push(6);
+        //Xóa phần tử cuối ra khỏi mảng
+        numbers.pop();
+        numbers.pop();
+
+        //Xóa phần tử đầu ra khỏi mảng
+        numbers.shift();
+        //Thêm 1 phần tử vào đầu mảng
+        numbers.unshift(10);
+        console.log(numbers.length);
+
+        //object
+        let obj = {
+            id: 1,
+            name: "Quan",
+            "phone number": "0123456789"
+        }
+        console.log(obj["phone number"]);
+
+        // alert('Quân Đẹp Trai');
+
+        // let name = prompt('Nhập vào tên của bạn');
+        // alert('Tên của bạn là : '+name);
+
+        function sayHello() {
+            alert('hello world');
+        }
+        // sayHello();
+
+        function sum(num1, num2) {
+            return num1 + num2;
+        }
+        // console.log(sum("Hello ", "World"));
+
+        // for (let i = 1; i <= 10; i++) {
+        //     console.log(i);
+        // }
+        // let i = 1;
+        // while (i <= 10) {
+        //     console.log(i);
+        //     i++;
+        // }
+
+
+        //setTimeOut  - Lam 1 viec gi day sau 1 khoang thoi gian
+        // setTimeout(function name(params) {
+        //     alert('Xin Chao Cac Ban');
+        // },3000);
+
+        //setInterval - cus sau 1 khoang thoi gian lai lam 1 viec gi day
+        let times = 10;
+        let id = setInterval(function name(params) {
+            document.write(times);
+            document.write("<br>");
+            if (times <= 0) {
+                clearInterval(id);
+            } else {
+                times--;
+            }
+
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>

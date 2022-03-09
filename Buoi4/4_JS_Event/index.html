@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 onclick="onH3click()">Thẻ h3 cấp 0 - thứ 1</h3>
+    <div class="test">
+        <h3 ondblclick="onH3dbClick()">Thẻ h3 cấp 1 - thứ 1</h3>
+        <h3>Thẻ h3 cấp 1 - thứ 2</h3>
+        <span>
+            <h3 onmouseover="onH3Over()">Thẻ h3 cấp 2</h3>
+        </span>
+        <h3 id="id1_3">Thẻ h3 cấp 1 - thứ 3</h3>
+        <div>
+            <div>
+                <h3>Thẻ h3 cấp 3</h3>
+            </div>
+        </div>
+    </div>
+    <h3>Thẻ h3 cấp 0 - thứ 2</h3>
+    <h3>Thẻ h3 cấp 0 - thứ 3</h3>
+    <a id="google" >Go to google</a>
+
+    <script>
+        function onH3click() {
+            console.log('h3_01 clicked');
+        }
+        function onH3dbClick() {
+            console.log('h3_11 clicked');
+        }
+        function onH3Over() {
+            console.log('h3_2 clicked');
+        }
+    </script>
+</body>
+</html>

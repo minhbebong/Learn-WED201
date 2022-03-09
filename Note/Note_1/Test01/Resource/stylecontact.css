@@ -1,0 +1,9 @@
+table tr td input {
+    padding: 10px 2px;
+    width: 400px;
+    font-size: 14px;
+}
+
+#btn-book-now{
+    margin-left: 65px;
+}
