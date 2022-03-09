@@ -1,0 +1,18 @@
+h1.center{
+    background-color: gray;
+    color: blue;
+    text-align: center;
+}
+h1.left{
+    background-color: gray;
+    color: blue;
+    text-align: left;
+}
+
+p{
+    color: blue;
+}
+p.right{
+    color: blue;
+    text-align: right;
+}
