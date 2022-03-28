@@ -4,47 +4,26 @@
 <head>
     <meta charset="utf-8">
     <title>javaScript_3</title>
+    <script type="text/javascript" src="Q3.js"></script>
 </head>
 
 <body>
     <table border="1">
-        <tr>
-            <td>THỰC HIỆN PHÉP TOÁN</td>
-        </tr>
-        <tr>
-            
-            <td>
-                Nhập a:<input type="text">
-            </td>
-        </tr>
-        <tr>
-            
-            <td>
-                Nhập b:<input type="text">
-            </td>
-        </tr>
+        <form>
+            <h1>THỰC HIỆN PHÉP TÍNH</h1>
+            Nhập a: <input type="text" id="a" /><br>
+            Nhập b: <input type="text" id="b" /><br>
+            <!-- Button -->
+            <input type="button" id="Tong()" value="a + b" onclick="setResult(Tong(getValueA(), getValueB()))" />
+            <input type="button" id="Hieu()" value="a - b" onclick="setResult(Hieu(getValueA(), getValueB()))" />
+            <input type="button" id="Tich()" value="a * b" onclick="setResult(Tich(getValueA(), getValueB()))" />
+            <input type="button" id="Thuong()" value="a / b" onclick="setResult(Thuong(getValueA(), getValueB()))" />
+
+            <p>
+                KẾT QUẢ <input type="text" id="c">
+            </p>
+        </form>
     </table>
-    <script language="javascript">
-        function Tong(a,b){
-          var c=parseInt(a.value)+parseInt(b.value);
-          return c;
-         } 
-         
-         function Hieu(a,b){
-          var c=parseInt(a.value)-parseInt(b.value);
-          return c;
-         }
-         
-         function Tich(a,b){
-          var c=parseInt(a.value)*parseInt(b.value);
-          return c;
-         } 
-         
-         function Thuong(a,b){
-          var c=parseInt(a.value)/parseInt(b.value);
-          return c;
-         }   
-      </script>      
 </body>
 
 </html>
