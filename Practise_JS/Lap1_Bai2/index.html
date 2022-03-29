@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+    <style>
+        #target{
+            border: 1px solid #000;
+            min-height: 300px;
+        }
+        .title{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="txtInput" value="FptHaNoi">
+    <h3>input text</h3>
+    <br>
+    <div id="target"></div>
+    <script>
+        var h3 = document.querySelector("h3");
+        var txtInput = document.querySelector("#txtInput");
+        txtInput.onkeyup = function(){
+            h3.innerText = txtInput.value;
+        }
+        //
+        var eLTarget = document.querySelector("#target");
+        var h2 = document.createElement("h2");
+        h2.innerText = "Hello FPT education Ha Noi";
+        h2.setAttribute("class", "title");
+        eLTarget.appendChild(h2);
+    </script>
+</body>
+</html>
