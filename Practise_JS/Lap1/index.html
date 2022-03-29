@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap1</title>
+</head>
+<body>
+    <style>
+        #target{
+            width: 100px; 
+            height: 100px;
+            background: gray;
+        }
+    </style>
+    <div id="target"></div>
+    <script>
+        var target = document.querySelector("#target");
+        target.onmouseover = function(){
+            target.style.background = "red";
+        }
+        target.onmouseout = function(){
+            target.style.background = "blue";
+        }
+    </script>
+</body>
+</html>
