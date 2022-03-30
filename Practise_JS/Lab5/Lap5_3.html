@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap5_2</title>
+    <script>
+        //Tính năng thêm
+        function them(button) {
+            var row = button.parentElement.parentElement.cloneNode(true);
+            var btnXoa = row.getElementsByTagName("button")[0];
+            btnXoa.innerText = "Xoá";
+            btnXoa.setAttribute('onclick', 'xoa(this)');
+            document.getElementById("cart").appendChild(row);
+            tinhtong();
+        }
+
+        //Tính năng xóa
+        function xoa(button) {
+            var row = button.parentElement.parentElement;
+            document.getElementById("cart").removeChild(row);
+            tinhtong();
+        }
+        //Tính năng tính tổng
+        function tinhtong() {
+            var cart = document.getElementById("cart");
+            var rows = cart.getElementsByTagName("tr");
+            var tong = 0;
+            for (let i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+                var price = cells[1].innerText.substring(1);
+                tong += Number(price);
+            }
+            //Inra tổng
+            document.getElementById("tong").innerText = tong;
+            //Kiểm tra
+            if(tong == 0){
+                document.getElementById("empty").style.display ="";
+                document.getElementById("not-empty").style.display ="none";
+            }
+            else{
+                document.getElementById("empty").style.display ="none";
+                document.getElementById("not-empty").style.display ="";
+                //Trường hợp nếu tong > 6000 hiển thị tiền màu vàng
+                //nhỏ hơn hiển thị màu trắng
+                if(tong > 6000){
+                    document.getElementById("tong").style.backgroundColor = "Yellow";
+                }
+                else{
+                    document.getElementById("tong").style.backgroundColor = "White";
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>DANH MỤC HÀNG HÓA</h3>
+    <table border="1">
+        <tr>
+            <td>iPhone9</td>
+            <td>$2700</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Samsung Star</td>
+            <td>$1500</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Nokia 1909</td>
+            <td>$3300</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Sony</td>
+            <td>$1700</td>
+            <td><button onclick="them(this)">Thêm</button></td>
+        </tr>
+    </table>
+    <br>
+    <h3>GIỎ HÀNG CỦA BẠN</h3>
+    <h3 id="empty">Bạn chưa chọn mặt hàng nào</h3>
+    <!-- //Khi chưa thêm sản phẩm thì sẽ để là none -->
+    <div id="not-empty" style="display: none;">
+        <table border="1" id="cart"></table>
+
+        <h3>TỔNG SỐ TIỀN : $<span id="tong">0</span></h3>
+    </div>
+</body>
+
+</html>
