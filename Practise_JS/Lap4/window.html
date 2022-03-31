@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai4</title>
+    <script>
+        var newWindow;
+        function openw(){
+            newWindow = window.open("http://www.google.com","Google","toolbar = YES, menubar = YES, width = 100")
+        }
+        function closew(){
+            newWindow.close();
+        }
+        function checkw(){
+            if(newWindow.closed){
+                alert("Đã đóng cửa sổ !");
+            } else{
+                alert("Cửa sổ đang mở !");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openw()">Mở cửa sổ</button>
+    <button onclick="closew()">Đóng cửa số</button>
+    <button onclick="checkw()">Kiểm tra</button>
+</body>
+</html>
