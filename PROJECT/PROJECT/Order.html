@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Order.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div id="order">
+			<!-- LEFT -->
+			<div id="order-left" >
+				<button class="menu-button" onclick="dropDown()" style="display: inline; font-size: 25px; position: relative; top: 3px;">Menu</button>
+				<i id="arrow" style="margin-left: 50px;"></i>
+				<hr>
+
+				<div id="drop-down" class="dropdown-content">
+					<div style="height: 45px;" id="hover">
+						<div id="bread" class="sign"></div>
+						<button class="menu-button" onclick="displaySubMenu('menu-breads'), sign('bread')">Breads</button>
+					</div>
+					<div style="height: 45px;" id="hover">
+						<div id="water" class="sign"></div>
+						<button class="menu-button" onclick="displaySubMenu('menu-drinks'), sign('water')">Drinks</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- CENTER -->
+			<div>
+				<div id="menu-breads" class="menu-items">
+					<p style="font-size: 40px; font-family: sans-serif;">Menu</p>
+					<hr style="width: 80%">
+					<p style="font-size: 30px; font-family: sans-serif;">Breads</p>
+					<br>
+						
+					<div class="img-wrapper"><img src="1.jpg"></div>
+					<p>Beef Bread</p>
+					<p>$3.5</p>
+					<button name="1 x Beef Bread" value=" + 3.5" id="1" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+						
+					<div class="img-wrapper"><img src="2.jpg"></div>
+					<p>Chicken Bread</p>
+					<p>$2.5</p>
+					<button name="1 x Chicken Bread" value=" + 2.5" id="2" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+						
+					<div class="img-wrapper"><img src="3.jpg"></div>
+					<p>All in One Bread</p>
+					<p>$2.5</p>
+					<button name="1 x All in One Bread" value=" + 2.5" id="3" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+						
+					<div class="img-wrapper"><img src="4.jpg"></div>
+					<p>Shrimps Bread</p>
+					<p>$2.0</p>
+					<button name="1 x Shrimps Bread" value=" + 2" id="4" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+						
+					<div class="img-wrapper"><img src="5.png"></div>
+					<p>Chili Bread</p>
+					<p>$2.0</p>
+					<button name="1 x Chili Bread" value=" + 2" id="5" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+						
+					<div class="img-wrapper"><img src="6.jpg"></div>
+					<p>Pan Bread</p>
+					<p>$1.5</p>
+					<button name="1 x Pan Bread" value=" + 1.5" id="6" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+					</div>
+
+				<div id="menu-drinks" class="menu-items">
+					<p style="font-size: 40px; font-family: sans-serif;">Menu</p>
+					<hr style="width: 80%">
+					<p style="font-size: 30px; font-family: sans-serif;">Drinks</p>
+					<br>
+
+					<div class="img-wrapper"><img  src="01.jpg"></div>
+					<p>Tra Da</p>
+					<p>$0.5</p>
+					<button name="1 x Tra Da" value=" + 0.5" id="7" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+
+					<div class="img-wrapper"><img  src="9.jpg"></div>
+					<p>Nhan Tran</p>
+					<p>$0.5</p>
+					<button name="1 x Nhan Tran" value=" + 0.5" id="8" onclick="order(this.id); addOrder(this.id)">Order</button><br><br>
+				</div>
+			</div>
+
+			<!-- RIGHT -->
+			<form id="order-list" action="file:///C:/Users/pc/Desktop/Front-end/form.html" target="_blank">
+				<!-- NUMBER OF ORDERED ITEMS  -->
+				<div style="height: 50px; font-family: sans-serif; font-weight: bold; border-bottom: 1px solid black; padding-top: 12px;">
+					<pre>   My Order          </pre>
+					(<input id="number-of-items" value="0" style="font-family: sans-serif; font-weight: bold;"> items)
+				</div>
+
+				<!-- LIST OF ORDERER ITEMS -->
+					<pre id="ordered-items" type="text"></pre>
+					<hr style="width: 80%; height: 4px; background-color: black;">
+				
+				<!-- TOTAL COST -->
+				<div style="padding-top: 10px; padding-bottom: 10px; border-bottom: 1px solid black;">
+						<pre style="font-size: 20px;">   Total          </pre>
+						<input id="total" value="0" style="font-size: 20px;">
+						<span style="font-size: 22px;"> $</span>
+				</div>
+				<br>
+				<button id="order-button" type="submit">Order Now</button>
+			</form>	
+		</div>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+	"use strict";
+
+	displaySubMenu('menu-breads'); 
+	dropDown();
+	sign("bread");
+
+	//Display the order
+	function displaySubMenu(id)
+	{
+		var orderItems = document.getElementsByClassName("menu-items");
+
+	 	for(let i = 0; i < orderItems.length; i++)
+	 	{
+	 		orderItems[i].style.display = "none";
+	 	}
+
+	 	document.getElementById(id).style.display = "block";
+	}
+
+	//Drop down the menu
+	function dropDown()
+	{
+	 	document.getElementById("drop-down").classList.toggle("displayDropDownMenu");
+	 	document.getElementById("arrow").classList.toggle("up");
+	}
+
+	//Increment number of ordered items
+	function order(id)
+	{
+		document.getElementById("number-of-items").value += " + 1";
+		document.getElementById("number-of-items").value = eval(document.getElementById("number-of-items").value);
+	}
+
+	//Add orders to the list 
+	function addOrder(id)
+	{
+		let string = document.getElementById(id).getAttribute("name");
+		string += "\n";
+		document.getElementById("ordered-items").innerHTML += string;
+		document.getElementById("total").value += document.getElementById(id).value;	
+		document.getElementById("total").value = eval(document.getElementById("total").value);
+	}
+
+	//Show bar sign when clicked
+	function sign(id)
+	{
+		var signs = document.getElementsByClassName("sign");
+
+		for(let i = 0; i < signs.length; i++)
+		{
+			signs[i].style.backgroundColor = "#F0F3F4";
+		}
+
+		document.getElementById(id).style.backgroundColor = "black";
+	}
+
+</script>

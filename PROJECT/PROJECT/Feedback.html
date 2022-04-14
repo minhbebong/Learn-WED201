@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>FEEDBACK</title>
+    <link rel="stylesheet" href="FeedbackStyle.css">
+</head>
+
+<body>
+        
+    <style>
+       
+        body {
+            background-image: url("https://1.bp.blogspot.com/-Fb7leSrbpkk/UO7VLH3zCII/AAAAAAAABgw/T_lFZIH838M/s1600/anh-nen-facebook-dep-nhat-57.png ");
+        }
+    </style>
+    
+    <form action="/cgi-bin/hello_get.cgi" method="get">
+
+        <div class="feedbackbox" aria-required="true" align="center" >
+
+
+            <label style="font-size: 130%" for="name" >
+                * Name</label>
+            <div class="form-group">
+                <input  type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" width="50cm" height="100%" required />
+            </div>
+<br>
+
+            <div class="form-group">
+                <label style="font-size: 130%" for="email">
+                    * Address</label>
+                <div class="form-group">
+                    <input type="address" class="form-control" name="address" id="address" placeholder="Your Address"
+                        data-rule="address" data-msg="Please enter a valid address" required />
+                    <div class="validation"></div>
+                </div>
+            </div>
+<br>
+
+            <label style="font-size: 130%" for="email">
+                * Email Address</label>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    data-rule="email" data-msg="Please enter a valid email" required />
+            </div>
+
+<br>
+            <div class="form-group">
+                <label style="font-size: 130%" for="number">
+                    * Phone Number</label>
+                <div class="form-group">
+                    <input class="form-control" name="number" id="number" placeholder="Your Number" data-rule="number"
+                        data-msg="Please enter a valid number" required />
+                    <div class="validation"></div>
+                </div>
+            </div>
+
+<br>
+            <div class="form-group">
+                <label style="font-size: 130%" for="title">
+                    * Your Title</label>
+                <div class="form-group">
+                    <input type="title" class="form-control" name="title" id="title" placeholder="Your Title"
+                        data-rule="title" data-msg="Please enter a valid title" required />
+                    <div class="validation"></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label style="font-size: 130%" for="email">
+                    * Your FeedBack</label>
+                <div class="form-group">
+                    <input type="feedback" class="form-control" name="feedback" id="feedback"
+                        placeholder="Your FeedBack" data-rule="feedback" data-msg="Please enter a valid feedback"
+                        required />
+                    <div class="validation"></div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label style="font-size: 130%" for="email">
+                    * Verify Code</label>
+                <div style="font-style: inherit" class="form-group">
+                    <input type="code" class="form-control" name="code" id="code" placeholder="Verify Code"
+                        data-rule="code" data-msg="Please enter a valid Verify Code" required />
+                    <div class="validation"></div>
+                </div>
+            </div>
+            <br>
+            <div><img src="https://cdn-images-1.medium.com/max/1600/0*AWtLZFO0ekUl2JRB."
+                    style="width:180px; height:70px"></div>
+            <div style="font-size: 150cm" id="code_noti"></div>
+            <br>
+            <input  style="font-size: 100%" type="submit" value="Submit" />
+        </div>
+        <script src="FeedbackScript.js">
+        </script>
+         <marquee><p class="style1" style="font-size:30px; color: white ">Thank you for sending feedback to us!</p>
+         </style>
+</body>
+
+</html>

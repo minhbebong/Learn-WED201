@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-img img{
+    width: 70px;
+    height: 70px;
+}
+.logo img{
+    width: 100%;
+}
+.header-form{
+    margin-right: 30px;
+}
+.header-form button{
+    background-color: black;
+    color: #fff;
+}
+
+.product h1{
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+}
+.product-img{
+
+}
+.product-content h2{
+    color: blue;
+}
+
+
+
+.footer {
+    text-align: center;
+    background-color: aqua;
+    width: 100%;
+    padding:30px;
+    color:#fff;
+}
